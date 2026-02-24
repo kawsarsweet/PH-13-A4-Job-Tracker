@@ -1,5 +1,3 @@
-// Job Data
-
 let jobs = [
   {
     id: 1,
@@ -88,8 +86,6 @@ let currentTab = "all";
 const container = document.getElementById("jobContainer");
 const emptyState = document.getElementById("emptyState");
 
-// Status Badge
-
 function getStatusBadge(status) {
 
   if (status === "interview") {
@@ -109,7 +105,6 @@ function getStatusBadge(status) {
           </span>`;
 }
 
-// Render Jobs
 
 function renderJobs() {
 
@@ -186,15 +181,11 @@ function setRejected(id) {
   renderJobs();
 }
 
-// Delete Job
-
-
 function deleteJob(id) {
   jobs = jobs.filter(j => j.id !== id);
   renderJobs();
 }
 
-// Dashboard Update
 
 function updateDashboard() {
 
@@ -208,7 +199,6 @@ function updateDashboard() {
     jobs.filter(j => j.status === "rejected").length;
 }
 
-// Tabs Active System
 
 const tabButtons = document.querySelectorAll(".tabBtn");
 
@@ -230,5 +220,6 @@ tabButtons.forEach(button => {
   });
 
 });
+
 
 renderJobs();
